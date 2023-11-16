@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Raleway";
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@media (width <= 1920px) {
+  .menu {
+    display: inline-flex;
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    gap: 39px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+@media (width <= 540px) {
+  .menu {
+    color: rgb(255, 255, 255);
+    background: none;
+    flex-direction: column;
+    justify-content: left;
+    align-items: none;
+  }
+}
+.menu .phone_number {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-weight: 800;
+}
+.menu a {
+  color: #400F65;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+@media (width <= 540px) {
+  .menu a {
+    color: rgb(255, 255, 255);
+    float: right;
+  }
+}
+.menu button {
+  color: rgb(64, 15, 101);
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  width: 347px;
+  height: 64px;
+  padding: 20px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #FFF;
+  border: none;
+}
+
+body {
+  color: white;
+  background: #835FB5;
+}/*# sourceMappingURL=main.css.map */

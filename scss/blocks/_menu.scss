@@ -1,0 +1,65 @@
+@import "fonts";
+@import "colors";
+@import "media";
+
+.menu {
+
+    @include fullhd {
+        display: inline-flex;
+        padding: 10px 10px 10px 20px;
+        align-items: center;
+        gap: 39px;
+        border-radius: 8px;
+        background: $white-opacity;
+    }
+
+     @include xs {
+        color: $white;
+        background: none;
+        flex-direction: column;
+        justify-content: left;
+        align-items: none;
+     }
+     // ТАМ ПОДЛОЖКА. ЗНАЧИТ НАХУЙ ЭТО ДРУГОЙ ЭЛЕМЕНт
+    
+
+    .phone_number {
+        font-variant-numeric: lining-nums proportional-nums;
+        font-weight: 800;
+    }
+    a {
+        color: #400F65;
+        font-family: Raleway;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+
+        @include xs {
+            color: $white;
+            float: right;
+        }
+    }
+
+    button {
+        color: $dark_purple;
+        font-family: Raleway;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        width: 347px;
+        height: 64px;
+        padding: 20px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: #FFF;
+        border: none;
+    }
+
+}
