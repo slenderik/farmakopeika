@@ -1,0 +1,11 @@
+@import "fonts";
+@import "colors";
+@import "media";
+
+
+.prizec {
+    border-radius: 22px;
+    opacity: 0.3;
+    background: rgba(115, 81, 166, 0.60);
+    backdrop-filter: blur(8px);
+}

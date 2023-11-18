@@ -4,7 +4,7 @@
 
 .menu {
 
-    @include fullhd {
+    @include x {
         display: inline-flex;
         padding: 10px 10px 10px 20px;
         align-items: center;
@@ -13,7 +13,7 @@
         background: $white-opacity;
     }
 
-     @include xs {
+     @include mobile {
         color: $white;
         background: none;
         flex-direction: column;
@@ -36,7 +36,7 @@
         line-height: normal;
         text-decoration: none;
 
-        @include xs {
+        @include mobile {
             color: $white;
             float: right;
         }
