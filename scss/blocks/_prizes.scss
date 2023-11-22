@@ -3,9 +3,18 @@
 @import "media";
 
 
-.prizec {
-    border-radius: 22px;
-    opacity: 0.3;
-    background: rgba(115, 81, 166, 0.60);
-    backdrop-filter: blur(8px);
+.prize-table {
+    color: $dark_purple;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .prize-table__prize-cart {
+
+
+        text-align: center;
+        display: block;
+        border-radius: 22px;
+        backdrop-filter: blur(8px);
+    }
 }

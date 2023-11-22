@@ -1,12 +1,19 @@
 @import "./blocks/footer";
 @import "./blocks/media";
 @import "./blocks/menu";
-
-
+@import "./blocks/prizes";
+@import "./blocks/modal";
 
 
 body {
     color: white;
     font-family: Raleway;
     background: #835FB5;
+}
+
+
+.wrapper {
+    vertical-align: center;
+    max-width: max-content;
+    margin: auto;
 }

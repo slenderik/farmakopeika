@@ -4,7 +4,7 @@
 
 .menu {
 
-    @include x {
+    @include fullhd {
         display: inline-flex;
         padding: 10px 10px 10px 20px;
         align-items: center;
@@ -18,16 +18,18 @@
         background: none;
         flex-direction: column;
         justify-content: left;
+        float: left;
         align-items: none;
+        z-index: 2;
      }
-     // ТАМ ПОДЛОЖКА. ЗНАЧИТ НАХУЙ ЭТО ДРУГОЙ ЭЛЕМЕНт
     
 
     .phone_number {
         font-variant-numeric: lining-nums proportional-nums;
         font-weight: 800;
     }
-    a {
+
+    .menu__element{
         color: #400F65;
         font-family: Raleway;
         font-size: 20px;
@@ -40,6 +42,10 @@
             color: $white;
             float: right;
         }
+    }
+
+    .menu__element:hover {
+        color: white;
     }
 
     button {

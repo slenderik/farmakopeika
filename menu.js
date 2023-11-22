@@ -12,4 +12,9 @@ function WinnersSwithcer() {
         menu.removeChild(one);
     }
 }
+
+function number() {
+    const pageWidth = document.documentElement.scrollWidth;
+}
+
 window.onload = WinnersSwithcer; // Начать отображение времени после загрузки документа
