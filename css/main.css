@@ -2,9 +2,71 @@
   font-family: "Raleway";
   src: url(../fonts/Raleway-Regular.ttf);
 }
-@media (width <= 1920px) {
+@font-face {
+  font-family: "Raleway-Black";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 900;
+  src: url(../fonts/Raleway/Raleway-Black.ttf);
+}
+@font-face {
+  font-family: "Raleway-ExtraBold";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 800;
+  src: url(../fonts/Raleway/Raleway-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Raleway-Bold";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 700;
+  src: url(../fonts/Raleway/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "Raleway-SemiBold";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 600;
+  src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Raleway-Medium";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 500;
+  src: url(../fonts/Raleway/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "Raleway-Regular";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 400;
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Alaya Roza";
+  line-height: 200;
+  font-variant-numeric: lining-nums proportional-nums;
+  src: url(../fonts/AlayaRoza-Regular.woff2);
+}
+.menu {
+  display: inline-flex;
+}
+@media (min-width: 1260px) {
   .menu {
-    display: inline-flex;
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    gap: 39px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+@media (min-width: 1440px) {
+  .menu {
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    gap: 39px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+@media (min-width: 1260px) {
+  .menu {
     padding: 10px 10px 10px 20px;
     align-items: center;
     gap: 39px;
@@ -23,34 +85,27 @@
     z-index: 2;
   }
 }
-.menu .phone_number {
-  font-variant-numeric: lining-nums proportional-nums;
-  font-weight: 800;
-}
 .menu .menu__element {
-  color: #400F65;
-  font-family: Raleway;
+  color: rgb(64, 15, 101);
+  font-family: Raleway-SemiBold;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-decoration: none;
 }
-@media (width <= 540px) {
-  .menu .menu__element {
-    color: rgb(255, 255, 255);
-    float: right;
-  }
+.menu .phone-number {
+  font-family: Raleway-ExtraBold;
+  font-variant-numeric: lining-nums proportional-nums;
 }
 .menu .menu__element:hover {
   color: white;
 }
 .menu button {
   color: rgb(64, 15, 101);
-  font-family: Raleway;
+  font-family: Raleway-Bold;
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   display: flex;
   width: 347px;
@@ -65,9 +120,151 @@
   border: none;
 }
 
+@media (min-width: 1260px) {
+  .burger-menu {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .burger-menu {
+    display: none;
+  }
+}
+@media (min-width: 1260px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.burger {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 26px;
+}
+
+.burger::before, .burger::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #000;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #000;
+  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+}
+
+.burger::after {
+  bottom: 0;
+  transition: bottom 0.3s 0.15s, transform 0.3s;
+}
+
+.burger-checkbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+}
+
+.burger-checkbox:checked + .burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s, transform 0.3s 0.15s;
+}
+
+.menu-list {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: grid;
+  gap: 12px;
+  padding: 42px 0;
+  margin: 0;
+  background: rgb(131, 95, 181);
+  list-style-type: none;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.menu-item {
+  display: block;
+  padding: 8px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.burger-checkbox:checked ~ .menu-list {
+  transform: translateX(0);
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway-Black";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 900;
+  src: url(../fonts/Raleway/Raleway-Black.ttf);
+}
+@font-face {
+  font-family: "Raleway-ExtraBold";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 800;
+  src: url(../fonts/Raleway/Raleway-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Raleway-Bold";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 700;
+  src: url(../fonts/Raleway/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "Raleway-SemiBold";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 600;
+  src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Raleway-Medium";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 500;
+  src: url(../fonts/Raleway/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "Raleway-Regular";
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 400;
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Alaya Roza";
+  line-height: 200;
+  font-variant-numeric: lining-nums proportional-nums;
+  src: url(../fonts/AlayaRoza-Regular.woff2);
 }
 .prize-table {
   color: rgb(64, 15, 101);
@@ -99,7 +296,7 @@
   border-radius: 12px;
   border: 1px solid rgb(115, 81, 166);
   background: #FFF;
-  display: flex;
+  display: block;
   height: 62px;
   padding: 12px 16px;
   gap: 10px;
@@ -122,6 +319,8 @@
   flex-direction: column;
   border-radius: 18px;
   background: #FFF;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .modal .modal__title {
   color: rgb(115, 81, 166);
@@ -147,13 +346,25 @@
 
 body {
   color: white;
-  font-family: Raleway;
-  background: #835FB5;
+  background: rgb(131, 95, 181);
 }
 
 .wrapper {
-  vertical-align: center;
-  max-width: -moz-max-content;
-  max-width: max-content;
   margin: auto;
+  width: 40px;
+}
+@media (min-width: 1260px) {
+  .wrapper {
+    width: 1160px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 1280px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    width: 1680px;
+  }
 }/*# sourceMappingURL=main.css.map */

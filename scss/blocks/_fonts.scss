@@ -2,3 +2,52 @@
     font-family: 'Raleway';
     src: url(../fonts/Raleway-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'Raleway-Black';
+    font-variant-numeric: lining-nums proportional-nums;
+    line-height: 900;
+    src: url(../fonts/Raleway/Raleway-Black.ttf)
+}
+
+@font-face {
+    font-family: 'Raleway-ExtraBold';
+    font-variant-numeric: lining-nums proportional-nums;
+    line-height: 800;
+    src: url(../fonts/Raleway/Raleway-ExtraBold.ttf)
+}
+
+@font-face {
+    font-family: 'Raleway-Bold';
+    font-variant-numeric: lining-nums proportional-nums;
+    line-height: 700;
+    src: url(../fonts/Raleway/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway-SemiBold';
+    font-variant-numeric: lining-nums proportional-nums;
+    line-height: 600;
+    src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway-Medium';
+    font-variant-numeric: lining-nums proportional-nums;
+    line-height: 500;
+    src: url(../fonts/Raleway/Raleway-Medium.ttf)
+}
+
+@font-face {
+    font-family: 'Raleway-Regular';
+    font-variant-numeric: lining-nums proportional-nums;
+    line-height: 400;
+    src: url(../fonts/Raleway/Raleway-Regular.ttf) 
+}
+
+@font-face {
+    font-family: 'Alaya Roza';
+    line-height: 200;
+    font-variant-numeric: lining-nums proportional-nums;
+    src: url(../fonts/AlayaRoza-Regular.woff2)
+}

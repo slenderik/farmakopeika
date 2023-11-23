@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
     <meta name="description" content="Акция от Фармакопейка. Раздаём куча вещей.">
@@ -11,7 +10,7 @@
       rel="preload"
       href="/fonts/static/Raleway-Regular.ttf"
       as="font"
-      type="font/woff2"
+      type="font/ttf"
       crossorigin="anonymous"
     />
 
@@ -24,58 +23,36 @@
             <nav>
                 <div class="menu" id="menu">
                     <img src="images/logo.svg" alt="logotip">
-                    <a class="menu__element phone_number" href="#">8-800-200-97-07</a>
+                    <a class="menu__element phone-number" href="tel:88002009707">8-800-200-97-07</a>
                     <a class="menu__element" href="#">Призы</a>
                     <a class="menu__element" href="#">Как выиграть</a>
                     <a class="menu__element" href="#" id="winners_link">Победители</a>
                     <a class="menu__element" href="#">Вопросы и ответы</a>
                     <a class="menu__element" href="#">Правила</a>
                     <button class="menu_button">Зарегистрировать промокод</button>
+                    <!-- ха-ха а что если-->
+                    <div class="burger-menu">
+                        <input
+                            type="checkbox"
+                            id="burger-checkbox"
+                            class="burger-checkbox"
+                        >
+                        <label
+                            for="burger-checkbox"
+                            class="burger">
+                        </label>
+                        <ul class="menu-list">
+                            <li><a href="#" class="menu-item">Главная</a><li>
+                            <li><a href="#" class="menu-item">О нас</a><li>
+                            <li><a href="#" class="menu-item">Команда</a><li>
+                            <li><a href="#" class="menu-item">Контакты</a><li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <main>
-        <div class="wrapper">
-            <h2>Срок акции с 23 октября по 30 ноября</h2>
-
-            <!-- PRIZES -->
-            <div>
-                <h1>Как выйграть?</h1>
-                <div class="prize-table">
-                    <div class="prize-table__prize-cart">
-                        <img src="images/prizes/электрогриль.png" alt="Картинка электрогриля XD">
-                        <h3>Электрогриль</h3>
-                    </div>
-                    <div class="prize-table__prize-cart">
-                        <img src="images/prizes/увлажнитель воздуха.png" alt="Картинка электрогриля XD">
-                        <h3>Увлажнитель воздуха</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal">
-                <div class="input">
-                    <h1 class="input__title">Фамилия*</h1>
-                    <input class="input__field" type="text">
-                </div>
-                <div class="input">
-                    <h1 class="input__title">Имя*</h1>
-                    <input class="input__field" type="text">
-                </div>
-                <div class="input">
-                    <h1 class="input__title">Телефон*</h1>
-                    <input class="input__field" type="text">
-                </div>
-
-                <input type="checkbox" id="promotionRules"/>
-                <label class="checkbox" for="promotionRules">Согласен (-на) с <a class="checkbox__link" href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
-                <input type="checkbox" id="privacyPolicy"/>
-                <label class="checkbox" for="privacyPolicy">Согласен (-на) на <a class="checkbox__link" href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
-
-                <button class="modal__button">Зарегистрировать промокод</button>
-            </div>
-        </div>
     </main>
 
     <script src="./menu.js"></script>

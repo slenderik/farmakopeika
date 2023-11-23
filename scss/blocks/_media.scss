@@ -1,3 +1,22 @@
+//  map holding breakpoint values
+$breakpoints: (
+  mobile : 320px, 
+  tablet : 1024px, 
+  desktop-s: 1260px,
+  desktop-m: 1440px,
+  desktop-l: 1920px
+);
+
+//  mixin to print out media queries (based on map keys passed) 
+@mixin media($keys...){
+  @each $key in $keys { 
+    @media (min-width: map-get($breakpoints, $key)){
+      @content
+    } 
+  }
+}
+
+
 @mixin more_then_fullhd {
     @media (width > 1920px) {
         @content;
